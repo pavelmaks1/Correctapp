@@ -1,0 +1,32 @@
+#header-info
+  .container
+    #header-text
+      a href='tel:+79964474748'
+        i class='fa fa-phone'
+        | 8(999)138-00-99
+
+      a href='#'
+        i class='fa fa-envelope' id='header-mail'
+        | a-oleg@list.ru
+
+      a href='#' class='header-contacts'
+        i class='fa fa-vk' class='contacts'
+      a href='#'
+        i class='fa fa-whatsapp' class='contacts'
+      a href='#'
+        i class='fa fa-telegram' class='contacts'
+
+#header-main
+  .container
+    = link_to root_path, method: :get
+      = image_tag('secondDesignLogo.jpg')
+    .menu
+      ul
+        li
+          =link_to 'Главная', root_path, method: :get
+        li
+          =link_to 'Категории', categories_path
+        li
+          a href='#' О нас
+        li
+          a href='#' Контакты

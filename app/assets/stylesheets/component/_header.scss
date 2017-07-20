@@ -1,0 +1,93 @@
+@import 'application.scss';
+
+
+
+#header-info {
+  height: 40px;
+  background-color: #363636;
+}
+
+#header-main {
+  height: 150px;
+}
+
+#header-main img {
+  height: 150px;
+}
+
+.menu  {
+  position: absolute;
+  top: 150px;
+  right: 200px;
+}
+
+.menu ul li{
+  display: inline;
+  padding-right: 20px ;
+}
+
+.menu ul li a{
+  color: #222;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 21px;
+
+}
+
+.menu ul li a:hover {
+  background-color: transparent;
+  text-decoration: none !important;
+  color: #000;
+  border-bottom: 2px solid $turquoise;
+}
+
+#main {
+}
+
+.slick-slider img {
+  position: relative;
+  height: 580px;
+  width:100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+//
+//.main-slide h1 , p{
+//  position: absolute;
+//  top: 140px;
+//  left: 0;
+//  right: 0;
+//  text-align: center;
+//  font-family: 'Lemon Tuesday', serif;
+//  color: #fff;
+//  font-size: 44px;
+//  z-index: 2;
+//}
+
+
+
+#header-text a, i{
+  padding-top: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#header-text i {
+  padding-right: 10px;
+}
+
+#header-text a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: #999999;
+}
+
+#header-mail {
+  padding-left: 30px;
+}
+
+.header-contacts {
+  padding-left: 690px;
+}
+.contacts:hover {
+  color: #999999;
+}
