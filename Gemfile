@@ -24,6 +24,9 @@ gem 'font-awesome-rails'
 gem 'jquery-slick-rails'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'activeadmin'
+gem 'cancancan'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'byebug', platform: :mri

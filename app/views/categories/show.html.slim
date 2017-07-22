@@ -1,0 +1,4 @@
+.container
+  h1= @category.title
+  - @category.items.each do |item|
+    = link_to item.title , item_path(item)
