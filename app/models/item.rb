@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :category
 
-  mount_uploader :image, ImageUploader
+  mount_uploaders :images, ImagesUploader
+  serialize :images, JSON
 end
