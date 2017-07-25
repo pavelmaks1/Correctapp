@@ -7,7 +7,13 @@
       = @category.title
 
     - @category.items.each do |item|
-      p= link_to item.title, item_path(item)
+      .col-6.col-sm-3
+        - unless item.images.blank?
+          = link_to item_path(item) do
+            = image_tag item.images.first.url(:thumb)
+        - else
+          = link_to item.title, item_path(item)
+
 
 
     = link_to 'Back', categories_path

@@ -2,16 +2,11 @@
   p#notice = notice
 
   p
-    strong Title:
-    = @item.title
+    h1= @item.title
   p
-    strong Description:
+    strong Описание:
     = @item.description
   p
-    strong Images:
     - @item.images.each do |image|
       = image_tag image.url(:thumb)
-  p
-    strong Category:
-    = @item.category.title
 

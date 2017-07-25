@@ -1,5 +1,11 @@
-#categories
+#page-categories
   .container
+    .text-center
+      h1 Каталог
     - @categories.each do |category|
       .col-md-4
-        = link_to category.title, category_path(category)
+        - unless category.avatar.blank?
+          = link_to category_path(category)
+            = image_tag category.avatar.url(:thumb)
+        - else
+          = link_to category.title, category_path(category)

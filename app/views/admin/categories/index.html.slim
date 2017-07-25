@@ -1,7 +1,13 @@
-#categories
+#page-categories
   .container
+    .text-center
+      h1 Каталог
     - @categories.each do |category|
       .col-md-4
-        = link_to category.title, admin_category_path(category)
+        - unless category.avatar.blank?
+          = link_to admin_category_path(category)
+            = image_tag category.avatar.url(:thumb)
+        - else
+          = link_to category.title, admin_category_path(category)
 
-    =link_to 'New category', new_admin_category_path
+    = link_to 'New category', new_admin_category_path, class: 'btn btn-default'

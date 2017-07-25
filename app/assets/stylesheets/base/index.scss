@@ -1,3 +1,26 @@
-#categories {
+@import 'application.scss';
+
+#page-categories {
+  min-height: 600px;
+  background-color: #f8f8f8;
+}
+
+#page-categories a{
+  margin-left: 30px;
+}
+
+#page-categories img {
+  margin-top: 20px;
+}
+
+#page-categories .text-center {
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+#page-categories h1 {
+  font-size: 40px;
+  color: #000;
+  border-bottom:2px solid $turquoise;
+  letter-spacing: 2px;
 
 }
