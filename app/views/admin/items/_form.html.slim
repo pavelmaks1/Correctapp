@@ -1,9 +1,9 @@
-= form_for(@item , html: { class: 'form-horizontal', multipart: true }) do |f|
-  - if @item.errors.any?
+= form_for [:admin ,@admin_item] do |f|
+  - if @admin_item.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@item.errors.count, "error")} prohibited this item from being saved:"
+      h2 = "#{pluralize(@admin_item.errors.count, "error")} prohibited this item from being saved:"
       ul
-        - @item.errors.full_messages.each do |message|
+        - @admin_item.errors.full_messages.each do |message|
           li = message
 
   .field

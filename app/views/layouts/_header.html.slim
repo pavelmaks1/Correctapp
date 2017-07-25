@@ -25,8 +25,17 @@
         li
           =link_to 'Главная', root_path, method: :get
         li
-          =link_to 'Категории', categories_path
+          - if current_user && current_user.admin?
+            =link_to 'Категории', admin_categories_path
+          - else
+            =link_to 'Категории', categories_path
         li
-          a href='#' О нас
+          - if current_user && current_user.admin?
+            =link_to 'Выйти', destroy_user_session_path, method: :delete
+          - else
+            a href='#' О нас
         li
-          a href='#' Контакты
+          - if current_user && current_user.admin?
+            =link_to 'Создать', new_admin_item_path
+          - else
+            a href='#' Контакты

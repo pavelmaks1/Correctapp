@@ -1,0 +1,13 @@
+.container
+  p#notice = notice
+
+  p
+    h1 Title:
+    h3= @admin_category.title
+
+  = link_to 'Edit', edit_admin_category_path(@admin_category)
+  '  |
+  = link_to 'Back', admin_categories_path
+
+  - @admin_category.items.each do |item|
+    p= link_to item.title, admin_item_path(item)
