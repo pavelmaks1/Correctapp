@@ -1,19 +1,21 @@
-.container
-  p#notice = notice
+#categories-show
+  .container
+    p#notice = notice
 
-  p
-    h1 Title:
-    h3= @admin_category.title
+
+    h1= @admin_category.title
+    = link_to 'Edit', edit_admin_category_path(@admin_category)
+    '  |
+    = link_to 'Back', admin_categories_path
     p= image_tag @admin_category.avatar.url(:thumb) unless @admin_category.avatar.blank?
 
-  = link_to 'Edit', edit_admin_category_path(@admin_category)
-  '  |
-  = link_to 'Back', admin_categories_path
-
-  - @admin_category.items.each do |item|
-    .col-6.col-sm-3
-      - unless item.images.blank?
-        = link_to admin_item_path(item) do
-          = image_tag item.images.first.url(:thumb)
-      - else
-        = link_to item.title, admin_item_path(item)
+    #cat-list
+      - @admin_category.items.each do |item|
+        .col-md-4
+          - unless item.images.blank?
+            = link_to admin_item_path(item) ,method: :get do
+              = image_tag item.images.first.url(:thumb)
+              .shadow
+              = button_to 'Подбробнее', item_path(item), method: :get, class: 'btn btn-default cat-show2 '
+          - else
+            = link_to item.title, admin_item_path(item)

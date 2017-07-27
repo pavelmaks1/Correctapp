@@ -2,18 +2,18 @@
   .container
     p#notice = notice
 
-    p
-      strong Title:
-      = @category.title
+    h1= @category.title
+    = link_to 'Back', categories_path, class: 'btn btn-default cat-show'
 
-    - @category.items.each do |item|
-      .col-6.col-sm-3
-        - unless item.images.blank?
-          = link_to item_path(item) do
-            = image_tag item.images.first.url(:thumb)
-        - else
-          = link_to item.title, item_path(item)
+    #cat-list
+      - @category.items.each do |item|
+        .col-md-4
+          - unless item.images.blank?
+            = link_to item_path(item), method: :get do
+              = image_tag item.images.first.url(:thumb)
+              .shadow
+              = button_to 'Подбробнее', item_path(item),method: :get , class: 'btn btn-default cat-show2 '
+          - else
+            = link_to item.title, item_path(item)
 
 
-
-    = link_to 'Back', categories_path

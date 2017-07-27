@@ -2,7 +2,8 @@
 
 #page-categories {
   min-height: 600px;
-  background-color: #f8f8f8;
+  background-color: #fff;
+
 }
 
 #page-categories a{
@@ -11,6 +12,7 @@
 
 #page-categories img {
   margin-top: 20px;
+
 }
 
 #page-categories .text-center {
@@ -20,7 +22,26 @@
 #page-categories h1 {
   font-size: 40px;
   color: #000;
-  border-bottom:2px solid $turquoise;
   letter-spacing: 2px;
+}
 
+.shadow-cat {
+  position: absolute;
+  width: 79%;
+  height: 50%;
+  -webkit-box-shadow: inset -20px -165px 149px -49px rgba(0,0,0,0.51);
+  -moz-box-shadow: inset -20px -165px 149px -49px rgba(0,0,0,0.51);
+  box-shadow: inset -20px -165px 149px -49px rgba(0,0,0,0.51);
+  top: 110px;
+  left: 45px;
+}
+
+p#cat-title {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Poiret One', sans-serif ;
+  font-weight: 800;
 }

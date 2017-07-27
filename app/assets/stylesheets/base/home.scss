@@ -99,9 +99,10 @@ button.btn-pr {
 }
 
 button.btn-nx {
+  position: absolute;
+  z-index: 100;
   top: 325px;
   right: 100px;
-  position: absolute;
 }
 
 .btn-pr, .btn-nx {
@@ -197,5 +198,50 @@ button.btn-nx {
 }
 
 #categories p {
-
 }
+
+#description-second {
+}
+
+#description-second p {
+  color: #000;
+  font-size: 30px;
+}
+
+#home-about {
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+#home-about  h1 {
+  margin-left: 150px;
+  margin-bottom: 100px;
+  color: #000;
+  font-size: 35px;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 800;
+}
+
+#home-about span {
+  padding-right: 20px;
+  color: $turquoise;
+}
+#home-about  p {
+  width: 70%;
+  margin-left: 100px;
+  margin-top: 30px;
+  font-family: 'Didact Gothic', sans-serif ;
+  color: #000;
+  font-size: 22px;
+}
+
+#fa-ab{
+  font-size: 30px;
+}
+
+
+#home-about i {
+  color: $turquoise;
+  padding-right: 20px;
+}
+
+

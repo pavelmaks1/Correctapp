@@ -7,5 +7,7 @@
         - unless category.avatar.blank?
           = link_to category_path(category)
             = image_tag category.avatar.url(:thumb)
+            .shadow-cat
+          p id='cat-title'= category.title
         - else
           = link_to category.title, category_path(category)

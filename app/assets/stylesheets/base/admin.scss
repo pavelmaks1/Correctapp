@@ -1,0 +1,12 @@
+@import 'application.scss';
+
+#admin-home {
+  margin-top: 50px;
+}
+
+#admin-home .btn {
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
+  background-color: $nicepink;
+}

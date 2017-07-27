@@ -18,8 +18,13 @@
 
 #header-main
   .container
-    = link_to root_path, method: :get
-      = image_tag('secondDesignLogo.jpg')
+    - if current_user && current_user.admin?
+      = link_to admin_path , method: :get
+        = image_tag('secondDesignLogo.jpg')
+    - else
+      = link_to root_path, method: :get
+        = image_tag('secondDesignLogo.jpg')
+
     .menu
       ul
         li

@@ -1,12 +1,18 @@
-.container
-  p#notice = notice
+#item-show
+  .container
+    p#notice = notice
 
-  p
-    h1= @item.title
-  p
-    strong Описание:
-    = @item.description
-  p
-    - @item.images.each do |image|
-      = image_tag image.url(:thumb)
+    .text-center
+      h1.show-title= @item.title
 
+    .slider-for
+      - @item.images.each do |image|
+        = image_tag image.url(:thumb)
+
+    .slider-nav
+      - @item.images.each do |image|
+        = image_tag image.url(:thumb)
+
+    p.item-desc
+      strong Описание:
+      = @item.description

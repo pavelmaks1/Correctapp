@@ -1,3 +1,131 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'application.scss';
+
+#item-show {
+
+}
+
+.slider-nav {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slider-nav img{
+  margin-top: 30px;
+  height: 200px;
+  width: 50px;
+}
+
+.slider-for img{
+  height: 600px;
+}
+
+.show-title {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 800;
+  color: #333;
+}
+.show-title h1 {
+
+}
+.slick-dots {
+  right: 30px;
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+
+}
+
+
+.slick-dots li  {
+  top: 35px;
+  width: 11px;
+  height: 11px;
+  margin: 0 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.slick-dots li button {
+  border: none;
+  font-size: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+}
+
+.slick-dots li button:hover {
+
+  background-color: $nicepink;
+}
+
+.item-desc {
+  background-color: #f8f8f8;
+  margin-left: 160px;
+  margin-top: 100px;
+  border: 1px solid #999;
+  width: 70%;
+  padding: 20px;
+  font-size: 20px;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+
+button.btn-nx-cat ,button.btn-pr-cat {
+
+}
+
+button.btn-pr-cat {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  z-index: 9999;
+}
+
+button.btn-nx-cat {
+  right: 20px;
+  top: 100px;
+  position: absolute;
+
+}
+
+.btn-pr-cat, .btn-nx-cat {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  padding-top: 10px;
+  background: none;
+  color: #fff;
+}
+
+.btn-pr-cat:hover, .btn-nx-cat:hover {
+  color: #333;
+  border-color: #333;
+}
+
+.btn-pr-cat:before {
+  -webkit-border-radius:100%;
+  -moz-border-radius:100%;
+  border-radius: 100%;
+  padding-right: 20px;
+  content: "";
+  font-family: 'FontAwesome';
+  font-size: 36px;
+
+}
+
+.btn-nx-cat:before {
+  content: "";
+  font-family: 'FontAwesome';
+  font-size: 36px;
+  padding-left: 20px;
+}

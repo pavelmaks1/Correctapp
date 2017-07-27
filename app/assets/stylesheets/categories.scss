@@ -1,3 +1,52 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#cat-list img{
+  height: 200px;
+  width: 300px;
+  margin-top: 50px;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+}
+
+#categories-show link{
+  margin-left: 10px;
+}
+
+#categories-show img {
+  height: 230px;
+  width: 350px;
+
+}
+
+.categories-links {
+}
+
+.shadow {
+  position: absolute;
+  width: 92%;
+  height: 50%;
+  -webkit-box-shadow: inset 0px -97px 10px -26px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px -97px 10px -26px rgba(0,0,0,0.75);
+  box-shadow: inset 0px -97px 10px -26px rgba(0,0,0,0.75);
+  top: 140px;
+  left: 15px;
+}
+
+.btn.btn-default.cat-show2 {
+  color: #fff;
+  position: absolute;
+  top: 230px;
+  left: 250px;
+  background-color: #a85486;
+  border: none;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius: 0;
+}
+
+.btn.btn-default.cat-show2:hover {
+  background-color: #d36eab;
+}

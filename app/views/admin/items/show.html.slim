@@ -1,19 +1,25 @@
-.container
-  p#notice = notice
+#item-show
+  .container
+    p#notice = notice
+    = link_to 'Edit', edit_admin_item_path(@admin_item), class: 'btn btn-primary'
+    '  |
+    = link_to 'Back', admin_items_path, class: 'btn btn-danger'
+    p
+      = @admin_item.title
 
-  p
-    = @admin_item.title
-  p
-    strong Description:
-    = @admin_item.description
-  p
-    strong Images:
-    - @admin_item.images.each do |image|
-      = image_tag image.url(:thumb)
-  p
-    strong Category:
-    = @admin_item.category.title
 
-  = link_to 'Edit', edit_admin_item_path(@admin_item)
-  '  |
-  = link_to 'Back', admin_items_path
+    .slider-for
+      - @admin_item.images.each do |image|
+        = image_tag image.url(:thumb)
+
+    .slider-nav
+      - @admin_item.images.each do |image|
+        = image_tag image.url(:thumb)
+    p
+      strong Category:
+      = @admin_item.category.title
+
+    p.item-desc
+      strong Описание:
+      = @admin_item.description
+
